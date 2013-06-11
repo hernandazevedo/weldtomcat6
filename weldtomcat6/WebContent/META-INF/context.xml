@@ -15,8 +15,8 @@
 		  minIdle="0" maxIdle="3" 
 		  maxWait="5000" removeAbandoned="true" 
 		  removeAbandonedTimeout="300" logAbandoned="true" 
-		  username="postgres" password="postgres" driverClassName="org.postgresql.Driver" 
-		  url="jdbc:postgresql://localhost:5432/boadica" description="Base de dados"
+		  username="root" password="root" driverClassName="com.mysql.jdbc.Driver" 
+		  url="jdbc:mysql://localhost:3306/boadica" description="Base de dados"
 		 
 		  />
 		  
