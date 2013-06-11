@@ -6,7 +6,7 @@
    <!-- Uncomment to enable injection into Servlets, Servlet Listeners and Filters in Tomcat -->
    <!-- <Listener className="org.jboss.weld.environment.tomcat.WeldLifecycleListener"/> -->
   
-  <!-- 
+  
   <Resource name="jdbc/weldtomcatmaven" 
 		  auth="Container" 
 		  type="javax.sql.DataSource" 
@@ -16,12 +16,9 @@
 		  maxWait="5000" removeAbandoned="true" 
 		  removeAbandonedTimeout="300" logAbandoned="true" 
 		  username="postgres" password="postgres" driverClassName="org.postgresql.Driver" 
-		  url="jdbc:postgresql://localhost:8080/agenda" description="Base de dados do VisitanteSeap"
-		  
-		  validationQuery="SELECT 1 FROM DUAL"
-          validationInterval="30000"
-          testOnBorrow="true"
+		  url="jdbc:postgresql://localhost:5432/boadica" description="Base de dados"
+		 
 		  />
 		  
-		  -->
+		  
 </Context>
