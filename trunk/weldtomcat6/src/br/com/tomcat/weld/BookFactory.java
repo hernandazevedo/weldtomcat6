@@ -52,7 +52,7 @@ public class BookFactory implements Serializable
     public void saveBook()
     {
     	//FIXME bug do postgres com JPA. nao consegui fazer funcionar com sequence
-    	book.setId(new Long( 1 + (int)(Math.random()*999999999)));
+//    	book.setId(new Long( 1 + (int)(Math.random()*999999999)));
         em.persist(book);
         books = em.createQuery("from Book").getResultList();
         book = new Book();
