@@ -1,6 +1,7 @@
 package br.com.tomcat.weld;
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import javax.enterprise.context.SessionScoped;
@@ -21,6 +22,16 @@ public class BookFactory implements Serializable
 	private final String text1 = "Write your book in a sec!";
     private final String text2 = "List of written books";
 
+    private Date date;
+    
+    public Date getDate() {
+		return date;
+	}
+    
+    public void setDate(Date date) {
+		this.date = date;
+	}
+    
     @Inject
     EntityManager em;
 
@@ -51,6 +62,8 @@ public class BookFactory implements Serializable
     @Transactional
     public void saveBook()
     {
+    	
+    	System.out.println("Usando o calendar do richfaces 4!! "+this.getDate());
     	//FIXME bug do postgres com JPA. nao consegui fazer funcionar com sequence
 //    	book.setId(new Long( 1 + (int)(Math.random()*999999999)));
         em.persist(book);

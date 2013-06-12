@@ -3,7 +3,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:f="http://java.sun.com/jsf/core">
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:a4j="http://richfaces.org/a4j"
+      xmlns:rich="http://richfaces.org/rich">
 <h:head>
     <title>Weld and JPA Portable Extension Demo</title>
 </h:head>
@@ -13,6 +15,15 @@
         <h:panelGrid columns="2">
             <p>Title</p>
             <h:inputText value="#{bookFactory.book.name}"/>
+              <a4j:outputPanel layout="block">
+                <rich:calendar id="cal" value="#{bookFactory.date}"
+					 popup="true"
+					 showApplyButton="false"
+					 style="width:200px"
+					 >
+					 
+				 </rich:calendar>
+            </a4j:outputPanel>
 
             <p>Author</p>
             <h:inputText value="#{bookFactory.book.author}"/>
