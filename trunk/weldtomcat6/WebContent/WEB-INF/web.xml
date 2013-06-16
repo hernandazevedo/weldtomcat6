@@ -8,6 +8,12 @@
 
    <display-name>Weld Numberguess example</display-name>
 
+   <!-- o estado da árvore de componentes será serializado no cliente -->
+   <context-param>
+        <param-name>javax.faces.STATE_SAVING_METHOD</param-name>
+        <param-value>client</param-value>
+    </context-param>
+   
    <context-param>
       <param-name>javax.faces.DEFAULT_SUFFIX</param-name>
       <param-value>.xhtml</param-value>
@@ -40,5 +46,10 @@
    <welcome-file-list>
        <welcome-file>index.jsf</welcome-file>       
    </welcome-file-list>
+   
+   <error-page>
+	    <exception-type>javax.faces.application.ViewExpiredException</exception-type>
+	    <location>/index.jsf</location>
+	</error-page>
 
 </web-app>
